@@ -44,10 +44,10 @@ def test_load_data(args):
     )
 
     # Iterate over a few batches for testing
-    for batch_idx, (batch, cond, crop_important) in enumerate(data_loader):
+    for batch_idx, (control_image, target_image) in enumerate(data_loader):
         print(f"Batch {batch_idx}:")
-        print(f"  Batch Shape: {batch.shape}")
-        print(f"  Cond Keys: {list(cond.keys())}")
+        print(f"  Batch Shape: {control_image.shape}")
+        print(f"  taget shape: {target_image.shape}")
         if batch_idx >= 2:  # Stop after a few batches
             break
 
